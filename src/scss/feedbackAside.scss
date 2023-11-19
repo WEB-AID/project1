@@ -1,0 +1,95 @@
+.feedback-block {
+    position: relative;
+    overflow-x: visible;
+
+    &__form {
+        width: 100%;
+        height: auto;    
+    
+        ul {
+            padding: 0;
+            margin: 0;
+             
+            li {
+                margin: 16px 16px 0 16px;
+                
+                @media (min-width: 440px) {
+                    margin: 16px 32px 0 32px;
+                }
+
+                input {
+                    padding: 16px;
+                    width: 100%;
+                    height: 48px;     
+                    border: 1px solid $menu-divider-color;
+                    border-radius: 8px;
+                    font-size: $button-font-size;
+                    font-family: "TT-Lakes-Regular";
+        
+                    &:focus {
+                        outline: 2px solid $button-color;
+                    }
+                }
+                
+                textarea {
+                    padding: 16px;
+                    width: 100%;
+                    height: 118px;
+                    border-radius: 8px;
+                    border: 1px solid $menu-divider-color;
+                    font-size: $button-font-size;
+                    font-family: "TT-Lakes-Regular";
+        
+                    &:focus {
+                        outline: 2px solid $button-color;
+                    }
+                }
+
+                span {
+                    line-height: 16px;
+                    font-family: "TT-Lakes-Medium";
+                }
+            }  
+        }   
+    }
+
+    h2 {
+        margin: 104px 0 8px 16px;
+        position: relative;
+        font-family: "TT-Lakes-Medium";
+
+        @media (min-width: 440px) {
+            margin: 104px 0 8px 32px;
+        }
+
+        @media (min-width: 768px) {
+            margin: 40px 0 8px 32px;
+        }
+
+        &:before {
+            width: 4px;
+            height: 40px;
+            content: '';
+            left: -16px;
+            top: -5px;
+            position: absolute;
+            border-radius: 4px;
+            background: $active-coral-color;
+            
+            @media (min-width: 440px) {
+                left: -32px;
+            }
+        }
+    }
+}
+
+.feedback-hideButton {
+    position: absolute;
+    left : 16px;
+    top : -75px;
+
+    @media (min-width: 768px) {
+        left : -65px;
+        top : -5px;
+    }
+}

@@ -1,0 +1,77 @@
+.sidemenu-footer {
+    display: flex;
+    flex-direction: column;
+
+    &__menu {
+        margin-bottom: 16px;
+        display: flex;
+
+        button {
+            margin-right: 16px;
+        }
+    }
+
+    &__info {
+        margin-bottom: 40px;
+
+        p {
+            margin: 0;
+
+            &:first-child {
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    &__email {
+        color: $dark-text-color;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        font-family: "TT-lakes-medium";
+    }
+
+    &__phone {
+        color: $dark-text-color;
+        font-size: $email-font-size;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+        font-family: "TT-lakes-bold";
+    }
+
+    &__language-buttons {
+        input[type="radio"] {
+            margin: -1px;
+            padding: 0;
+            width: 1px;
+            height: 1px;
+            position: absolute;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            border: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        label {
+            margin-right: 7px;
+            width: 25px;
+            height: 24px;
+            display: block;
+            color: $dark-text-color;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            font-family: "TT-lakes-medium";
+            cursor: pointer;
+        }
+    }  
+}
+
+#btn-ru:checked~ul label[for="btn-ru"],
+#btn-en:checked~ul label[for="btn-en"],
+#btn-ch:checked~ul label[for="btn-ch"] {
+    color: $grey-text-color;
+}

@@ -1,0 +1,36 @@
+.sidemenu-content {
+    margin-bottom: auto;
+
+    ul {
+        padding: 0px;
+
+        a {
+            margin-bottom: 24px;
+            height: 24px;
+            display: block;
+            color: $dark-text-color;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            font-family: "TT-lakes-medium";
+        }
+    }
+
+    &__navlink--active {
+        position: relative;
+        
+        &:before {
+            width: 4px;
+            height: 28px;      
+            content: '';
+            left: -24px;
+            top: -3px;
+            position: absolute;
+            border-radius: 4px;
+            background: $active-coral-color;
+        }
+    
+        a {
+            color: $grey-text-color;
+        }
+    }
+}

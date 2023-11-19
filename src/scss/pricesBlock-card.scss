@@ -1,0 +1,144 @@
+.prices-block-card {
+    margin-bottom: 16px;
+    padding: 16px;
+    width: 260px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background-color: $white-color;
+
+    @media (max-width: 767px) {
+        margin-right: 16px; 
+        border-radius: 6px;
+    }
+
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+        height: 64px;
+        flex-direction: row;
+        flex-grow: 1;
+        align-items: center;
+    }    
+
+    &:after {
+        @media (min-width: 768px) {
+            width: 85vw;
+            height: 1px;
+            top: 63px;
+            left: 5vw;
+            content: '';
+            position: absolute;
+            background: $menu-divider-color;  
+        }
+
+        @media (min-width: 1440px) {
+            width: 1008px;
+            left: 28px;
+        }
+    }    
+
+    &__service {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+            width: 55%;
+        }
+    }
+
+    &__price {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+            width: 15%;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+
+        @media (min-width: 768px) {
+            width: 30%;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+        }
+
+        button {
+            padding: 12px;
+            min-width: 119px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            border-radius: 16px;
+            border: none;
+            font-family: "TT-Lakes-Medium";
+            background: $button-color;
+                
+            @media (min-width: 768px) {
+                margin-left: auto;
+            }
+
+            &:after {
+                width: 8px;
+                height: 8px;
+                right: 14px;
+                content: '';
+                transform: rotate(45deg);
+                position: absolute;
+                border-top: 2px solid $white-color;
+                border-right: 2px solid $white-color; 
+            }
+
+            span {
+                color: $white-color;
+            }
+        }
+    }
+
+    h5 {
+        margin: 0 0 3px 0;
+        padding: 0;
+        opacity: 0.7218;
+        color: $grey-text-color;
+        font-size: $article-font-size;
+        line-height: 16px;
+        font-family: "TT-Lakes-Regular";
+
+        @media (min-width: 768px) {
+            display: none;
+        } 
+    }
+
+    span {
+        color: $dark-text-color;
+        font-size: $article-font-size;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        font-family: "TT-Lakes-Medium";
+    }
+}
+
+.wide-mode-topline {
+    @media (min-width: 768px) {
+        border-radius: 6px 6px 0 0;
+    }
+}
+
+.wide-mode-bottomline {
+    @media (min-width: 768px) {
+        border-radius: 0 0 6px 6px;
+    }
+
+    &:after {
+        display: none;
+    }
+}

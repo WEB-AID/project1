@@ -1,0 +1,93 @@
+%menu-divider {
+    width: 2px;
+    height: 32px;
+    border-radius: 1px;
+    background: $menu-divider-color;
+}
+
+.main-menu {
+    height: 88px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $blocks-divider-color;
+
+    &__left {
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+    
+        * {
+            margin-left: 16px;
+
+            &:first-child {
+                margin-left: 16px;
+
+                @media (min-width: 768px) {
+                    margin-left: 24px;
+                }
+            }
+        }    
+    }
+  
+    &__right {
+        margin-left: 16px;
+        display: flex;
+        align-items: center;
+    
+        @media (min-width: 1120px) {
+            display: none;
+        }
+    
+        * {
+            margin-right: 16px;
+        }
+
+        *:last-child {
+            @media (min-width: 768px) {
+                margin-right: 24px;
+            }
+        }
+    }
+    
+    &__wide {
+        display: none;
+            
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+        }
+    
+        * {
+            margin-right: 16px;
+        }
+
+        .button--account {
+            @media (min-width: 1120px) {
+                margin-right: 24px;
+            }
+        }
+    }
+
+    &__divider-left {
+        @extend %menu-divider;
+        order: 3;
+
+        @media (min-width: 340px) {
+            order: unset;
+        }
+    }
+
+    &__divider-wide {
+        @extend %menu-divider;
+        margin-right: 0;
+        display: none;
+
+        @media (min-width: 768px) and (max-width: 1119px) {
+            display: unset;
+        }
+    }
+
+    &__burger-button {
+        background-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg"><path d="M11 13C11 12.4477 11.4477 12 12 12H28C28.5523 12 29 12.4477 29 13C29 13.5523 28.5523 14 28 14H12C11.4477 14 11 13.5523 11 13ZM11 20C11 19.4477 11.4477 19 12 19H20C20.5523 19 21 19.4477 21 20C21 20.5523 20.5523 21 20 21H12C11.4477 21 11 20.5523 11 20ZM12 26C11.4477 26 11 26.4477 11 27C11 27.5523 11.4477 28 12 28H24C24.5523 28 25 27.5523 25 27C25 26.4477 24.5523 26 24 26H12Z" fill="white" /></svg>');
+    }
+}

@@ -1,0 +1,48 @@
+.scroll-nav-block {
+    margin: 24px 0 0 16px;
+    overflow-x: scroll;
+    mask: $transparent-gradient;
+
+    @media (min-width: 768px) {
+        margin-left: 24px;
+    }
+
+    @media (min-width: 1440px) {
+        margin-left: 32px;
+        mask: unset;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    
+    &__buttons {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+      
+        @media (min-width: 1120px) {
+            flex-wrap: wrap;
+        }
+
+        li:hover,
+        li:first-child {
+            border-radius: 6px;
+            border: 2px solid $scroll-border-color;
+            background-color: $white-color;
+        }
+
+        a {
+            margin: 0 20px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            color: $grey-text-color;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            font-family: "TT-lakes-medium";
+        }
+    }
+}

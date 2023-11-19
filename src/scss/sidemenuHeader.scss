@@ -1,0 +1,18 @@
+.sidemenu-header {
+    margin-bottom: 50px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+
+    &__hideButton {
+        margin-right: 16px;
+    
+        @media (min-width: 1440px) {
+            display: none;
+        }
+    }
+
+    *:last-child {
+        margin-left: auto;
+    }
+}

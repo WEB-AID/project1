@@ -1,0 +1,36 @@
+$main-bg-color: #F8F8F8;
+$button-color: #FF3E79;
+$menu-divider-color: #EAEAEA;
+$blocks-divider-color: #D9FFF5;
+$white-color: #fff;
+$scroll-border-color: #B8FFEC;
+$active-coral-color: #41f6d7;
+$grey-text-color: #7E7E82;
+$dark-text-color: #1B1C21;
+$swiper-pagination-color: #b5b6bc;
+$swiper-bullet-color: #dddddd;
+$submit-font-size: 12px;
+$article-font-size: 14px;
+$button-font-size: 16px;
+$email-font-size: 24px;
+$title-font-size: 28px;
+$transparent-gradient: linear-gradient(to right,
+rgba(0, 0, 0, 1) 50%,
+rgba(0, 0, 0, 1) 90%,
+rgba(0, 0, 0, 0) 100%);
+
+@import './commonStyles.scss';
+@import './sidemenuHeader.scss';
+@import './sidemenuContent.scss';
+@import './sidemenuFooter.scss';
+@import './feedbackAside.scss';
+@import './orderCallAside.scss';
+@import './mainMenu.scss';
+@import './titleBlock.scss';
+@import './scrollNavBlock.scss';
+@import './articleBlock.scss';
+@import './brandsBlock.scss';
+@import './techRepairBlock.scss';
+@import './pricesBlock.scss';
+@import './pricesBlock-card.scss';
+@import './footerBlock.scss';

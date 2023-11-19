@@ -178,8 +178,8 @@ a {
   --swiper-pagination-top: auto;
   --swiper-pagination-bullet-width: 12px;
   --swiper-pagination-bullet-height: 12px;
-  --swiper-pagination-color: $swiper-pagination-color;
-  --swiper-pagination-bullet-inactive-color: $swiper-bullet-color; }
+  --swiper-pagination-color: black;
+  --swiper-pagination-bullet-inactive-color: green; }
   @media (min-width: 768px) {
     .swiper-pagination {
       display: none; } }

@@ -112,7 +112,8 @@
     }
 
     &__bottom-commercial {
-        margin: 0 40px 0 16px;
+        display: block;
+        margin: 0 50px 0 16px;
         align-self: start;
         position: relative;
         color: $dark-text-color;
@@ -133,7 +134,7 @@
             border-top: 2px solid $button-color;
             border-right: 2px solid $button-color;
 
-            @media (max-width: 351px) {
+            @media (max-width: 361px) {
                 left: 106px;
                 bottom: 6px;
             }

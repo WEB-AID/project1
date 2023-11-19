@@ -169,11 +169,13 @@ a {
 
 .submit-btn {
     margin-left: auto;
+    padding-right: 26px;
     width: 136px;
     height: 32px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
     color: $white-color;
     text-transform: uppercase;
     font-size: $submit-font-size;
@@ -185,6 +187,17 @@ a {
     border: none;
     background: $button-color;
     cursor: pointer;
+
+    &:after {
+        width: 8px;
+        height: 8px;
+        right: 14px;
+        content: '';
+        transform: rotate(45deg);
+        position: absolute;
+        border-top: 2px solid $white-color;
+        border-right: 2px solid $white-color; 
+    }
 
     &:hover {
         opacity: 0.3;

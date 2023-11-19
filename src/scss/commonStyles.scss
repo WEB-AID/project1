@@ -227,8 +227,8 @@ a {
     --swiper-pagination-top: auto;
     --swiper-pagination-bullet-width: 12px;
     --swiper-pagination-bullet-height: 12px;
-    --swiper-pagination-color: $swiper-pagination-color;
-    --swiper-pagination-bullet-inactive-color: $swiper-bullet-color;
+    --swiper-pagination-color: #b5b6bc;
+    --swiper-pagination-bullet-inactive-color: #dddddd;
   
     @media (min-width: 768px) { 
         display: none;

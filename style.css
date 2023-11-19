@@ -130,11 +130,13 @@ a {
 
 .submit-btn {
   margin-left: auto;
+  padding-right: 26px;
   width: 136px;
   height: 32px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  position: relative;
   color: #fff;
   text-transform: uppercase;
   font-size: 12px;
@@ -146,6 +148,15 @@ a {
   border: none;
   background: #FF3E79;
   cursor: pointer; }
+  .submit-btn:after {
+    width: 8px;
+    height: 8px;
+    right: 14px;
+    content: '';
+    transform: rotate(45deg);
+    position: absolute;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff; }
   .submit-btn:hover {
     opacity: 0.3;
     transition: opacity 1.5s ease; }

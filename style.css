@@ -630,7 +630,8 @@ a {
     background: url(./static/readmore-icon.svg) no-repeat -5px; }
     .article-block__button:hover {
       opacity: 0.3;
-      transition: opacity 1.5s ease; }
+      transition: opacity 1.5s ease;
+      cursor: pointer; }
 
 .brands-block {
   margin-bottom: 16px;

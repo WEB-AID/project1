@@ -77,5 +77,10 @@
         border: 0;
         font-family: "TT-lakes-medium";
         background: url(../img/readmore-icon.svg) no-repeat -5px;
+
+        &:hover {
+            opacity: 0.3;
+            transition: opacity 1.5s ease;
+        }
     }
 }

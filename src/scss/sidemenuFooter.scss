@@ -39,39 +39,37 @@
     }
 
     &__language-buttons {
-        input[type="radio"] {
-            margin: -1px;
-            padding: 0;
-            width: 1px;
-            height: 1px;
-            position: absolute;
-            overflow: hidden;
-            clip: rect(0 0 0 0);
-            border: 0;
-        }
-
         ul {
             margin: 0;
             padding: 0;
             display: flex;
-        }
 
-        label {
-            margin-right: 7px;
-            width: 25px;
-            height: 24px;
-            display: block;
-            color: $dark-text-color;
-            line-height: 24px;
-            letter-spacing: -0.2px;
-            font-family: "TT-lakes-medium";
-            cursor: pointer;
-        }
+            input[type="radio"] {
+                margin: -1px;
+                padding: 0;
+                width: 1px;
+                height: 1px;
+                position: absolute;
+                overflow: hidden;
+                clip: rect(0 0 0 0);
+                border: 0;
+            }
+
+            span {
+                margin-right: 7px;
+                width: 25px;
+                height: 24px;
+                display: block;
+                color: $dark-text-color;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                font-family: "TT-lakes-medium";
+                cursor: pointer;
+            }
+
+            input:checked + span {
+                color: $grey-text-color;
+            }
+        }    
     }  
-}
-
-#btn-ru:checked~ul label[for="btn-ru"],
-#btn-en:checked~ul label[for="btn-en"],
-#btn-ch:checked~ul label[for="btn-ch"] {
-    color: $grey-text-color;
 }

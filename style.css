@@ -41,13 +41,13 @@ a {
 .sidemenu-layout {
   width: 306px;
   height: 100vh;
+  top: 0;
   position: fixed;
   overflow-y: auto;
   transform: translateX(-600px);
   transition: transform 0.5s ease;
   -webkit-backdrop-filter: blur(65px);
           backdrop-filter: blur(65px);
-  z-index: 99;
   box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
   background-color: #fff; }
   @media (min-width: 320px) and (max-width: 360px) {
@@ -62,10 +62,10 @@ a {
   width: 320px;
   height: 100vh;
   right: 0;
+  top: 0;
   position: fixed;
   transform: translateX(600px);
   transition: transform 0.5s ease;
-  z-index: 99;
   box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
   background-color: #fff; }
   @media (min-width: 320px) and (max-width: 440px) {
@@ -79,10 +79,10 @@ a {
   width: 320px;
   height: 100vh;
   right: 0;
+  top: 0;
   position: fixed;
   transform: translateX(600px);
   transition: transform 0.5s ease;
-  z-index: 99;
   box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
   background-color: #fff; }
   @media (min-width: 320px) and (max-width: 440px) {
@@ -269,34 +269,31 @@ a {
     line-height: 32px;
     letter-spacing: -0.6px;
     font-family: "TT-lakes-bold"; }
-  .sidemenu-footer__language-buttons input[type="radio"] {
-    margin: -1px;
-    padding: 0;
-    width: 1px;
-    height: 1px;
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    border: 0; }
   .sidemenu-footer__language-buttons ul {
     margin: 0;
     padding: 0;
     display: flex; }
-  .sidemenu-footer__language-buttons label {
-    margin-right: 7px;
-    width: 25px;
-    height: 24px;
-    display: block;
-    color: #1B1C21;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    font-family: "TT-lakes-medium";
-    cursor: pointer; }
-
-#btn-ru:checked ~ ul label[for="btn-ru"],
-#btn-en:checked ~ ul label[for="btn-en"],
-#btn-ch:checked ~ ul label[for="btn-ch"] {
-  color: #7E7E82; }
+    .sidemenu-footer__language-buttons ul input[type="radio"] {
+      margin: -1px;
+      padding: 0;
+      width: 1px;
+      height: 1px;
+      position: absolute;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      border: 0; }
+    .sidemenu-footer__language-buttons ul span {
+      margin-right: 7px;
+      width: 25px;
+      height: 24px;
+      display: block;
+      color: #1B1C21;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      font-family: "TT-lakes-medium";
+      cursor: pointer; }
+    .sidemenu-footer__language-buttons ul input:checked + span {
+      color: #7E7E82; }
 
 .feedback-block {
   position: relative;
@@ -304,37 +301,32 @@ a {
   .feedback-block__form {
     width: 100%;
     height: auto; }
-    .feedback-block__form ul {
-      padding: 0;
-      margin: 0; }
-      .feedback-block__form ul li {
-        margin: 16px 16px 0 16px; }
-        @media (min-width: 440px) {
-          .feedback-block__form ul li {
-            margin: 16px 32px 0 32px; } }
-        .feedback-block__form ul li input {
-          padding: 16px;
-          width: 100%;
-          height: 48px;
-          border: 1px solid #EAEAEA;
-          border-radius: 8px;
-          font-size: 16px;
-          font-family: "TT-Lakes-Regular"; }
-          .feedback-block__form ul li input:focus {
-            outline: 2px solid #FF3E79; }
-        .feedback-block__form ul li textarea {
-          padding: 16px;
-          width: 100%;
-          height: 118px;
-          border-radius: 8px;
-          border: 1px solid #EAEAEA;
-          font-size: 16px;
-          font-family: "TT-Lakes-Regular"; }
-          .feedback-block__form ul li textarea:focus {
-            outline: 2px solid #FF3E79; }
-        .feedback-block__form ul li span {
-          line-height: 16px;
-          font-family: "TT-Lakes-Medium"; }
+    .feedback-block__form p {
+      margin: 16px 16px 0 16px;
+      padding: 0; }
+      @media (min-width: 440px) {
+        .feedback-block__form p {
+          margin: 16px 32px 0 32px; } }
+      .feedback-block__form p input {
+        padding: 16px;
+        width: 100%;
+        height: 48px;
+        border: 1px solid #EAEAEA;
+        border-radius: 8px;
+        font-size: 16px;
+        font-family: "TT-Lakes-Regular"; }
+        .feedback-block__form p input:focus {
+          outline: 2px solid #FF3E79; }
+      .feedback-block__form p textarea {
+        padding: 16px;
+        width: 100%;
+        height: 118px;
+        border-radius: 8px;
+        border: 1px solid #EAEAEA;
+        font-size: 16px;
+        font-family: "TT-Lakes-Regular"; }
+        .feedback-block__form p textarea:focus {
+          outline: 2px solid #FF3E79; }
   .feedback-block h2 {
     margin: 104px 0 8px 16px;
     position: relative;
@@ -373,27 +365,25 @@ a {
   .ordercall-block__form {
     min-width: 100%;
     height: auto; }
-    .ordercall-block__form ul {
-      padding: 0;
-      margin: 0; }
-      .ordercall-block__form ul li {
-        margin: 16px 16px 0 16px; }
-        @media (min-width: 440px) {
-          .ordercall-block__form ul li {
-            margin: 16px 32px 0 32px; } }
-        .ordercall-block__form ul li input {
-          padding: 16px;
-          width: 100%;
-          height: 48px;
-          border: 1px solid #EAEAEA;
-          border-radius: 8px;
-          font-size: 16px;
-          font-family: "TT-Lakes-Medium"; }
-          .ordercall-block__form ul li input:focus {
-            outline: 2px solid #FF3E79; }
-        .ordercall-block__form ul li span {
-          line-height: 16px;
-          font-family: "TT-Lakes-Medium"; }
+    .ordercall-block__form p {
+      margin: 16px 16px 0 16px;
+      padding: 0; }
+      @media (min-width: 440px) {
+        .ordercall-block__form p {
+          margin: 16px 32px 0 32px; } }
+      .ordercall-block__form p input {
+        padding: 16px;
+        width: 100%;
+        height: 48px;
+        border: 1px solid #EAEAEA;
+        border-radius: 8px;
+        font-size: 16px;
+        font-family: "TT-Lakes-Medium"; }
+        .ordercall-block__form p input:focus {
+          outline: 2px solid #FF3E79; }
+      .ordercall-block__form p span {
+        line-height: 16px;
+        font-family: "TT-Lakes-Medium"; }
   .ordercall-block h2 {
     position: relative;
     margin: 104px 0 8px 16px;
